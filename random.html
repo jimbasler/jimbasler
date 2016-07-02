@@ -1,0 +1,59 @@
+<html>
+<head>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="js/jquery.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/random.js"></script>
+
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row text-center">
+    <h2>Random Quote</h2>
+  </div>
+  <div class="row">
+    <div class="col-xs-4"></div>
+    <div class="col-xs-4 well quote">
+    </div>
+    <div class="col-xs-4"></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4"></div>
+    <div id="twitterDiv" class="col-xs-2 text-left">
+      <a class="twitter-share-button" data-size="large"  href="https://twitter.com/intent/tweet?text=tfw">Tweet</a>
+    </div>
+    <div id="buttonDiv" class="col-xs-2 text-right">
+      <button id="getQuote" class="btn btn-primary">
+        Get Quote
+      </button>
+    </div>
+    <div class="col-xs-4"></div>
+  </div>
+</div>
+
+<script>
+  window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+
+    return t;
+  }(document, "script", "twitter-wjs"));
+</script>
+
+</body>
